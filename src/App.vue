@@ -1,28 +1,48 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<v-app>
+  <div id="app" style="height: 100%;background:black;">
+    <Navbar />
+    
+    <div style="background:black" >
+      <router-view />
+      
+    </div>
   </div>
+  
+  <v-footer
+        color="black"
+  >
+        
+        <SecondFooter />
+
+      </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Navbar from '@/views/Navbar'
+import SecondFooter from '@/views/second_footer'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    SecondFooter
+  },
+  
+  computed: {
+    UserEmail() {
+      return this.$store.state.Email;
+    },
+    Language() {
+      return this.$store.state.language;
+    },
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
+
 </style>
+
