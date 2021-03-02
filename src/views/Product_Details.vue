@@ -95,7 +95,7 @@ export default {
           quantity:this.quantity
         });
       this.show = true
-      //this.$router.push("/");
+      this.$router.push("/");
       
     },
     loadData() {

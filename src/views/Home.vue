@@ -5,7 +5,7 @@
         <v-row class="pb-12">
           <v-carousel
             cycle
-            height="200"
+            height="500"
             hide-delimiter-background
             show-arrows-on-hover
           >

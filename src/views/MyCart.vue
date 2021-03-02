@@ -20,7 +20,7 @@
        
                     contain
                     :src="data.cover_photo_link"
-                    style="max-height:100px;margin-top:50px"
+                    style="max-height:100px;max-width:100px;margin-top:50px"
                   > </v-img>
                 </div>
             </v-col>

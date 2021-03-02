@@ -9,7 +9,7 @@ import Home from '@/views/Home'
 import Login from '@/views/Login'
 import MainPage from '@/views/MainPage'
 import Profile from '@/views/Profile'
-
+import ProductList from '@/views/ProductList'
 import Register from '@/views/Register'
 
 import Product_Details from '@/views/Product_Details'
@@ -21,6 +21,11 @@ Vue.use(VueRouter)
     name: 'MyCart',
     component: MyCart,
     
+  },
+  {
+    path: '/tcs-products',
+    name: 'ProductList',
+    component: ProductList,
   },
   {
     path: '/product-details',

@@ -40,7 +40,15 @@ const store = new Vuex.Store({
       state.Credit = data
     },
     add_to_cart(state,data) {
-      state.Cart.push(data)
+      let index = state.Cart.findIndex(item => item.id == data.id);
+      console.log(index)
+      if(index >= 0){
+        state.Cart[index].quantity = parseInt(state.Cart[index].quantity) + parseInt(data.quantity);
+      }    
+      else {
+        state.Cart.push(data)
+      }
+
     },
     drop_from_cart(state,data) {
      
